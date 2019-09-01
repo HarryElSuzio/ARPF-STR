@@ -71,7 +71,15 @@ RegisterCommand('spawnstr', function()
     end
 end, false)
 
+RegisterCommand('spawnstr', function() 
+        LoadModel('prop_ld_binbag_01')
+        local wheelchair = CreateObject(GetHashKey('prop_ld_binbag_01'), GetEntityCoords(PlayerPedId()), true)
+end, false)
 
+RegisterCommand('ro', function(source, args)
+        DeleteOBJ('prop_ld_binbag_01')
+        TriggerEvent("chatMessage", "", {255,255,255}, "^3Objects(s) deleted.")
+end, false)
 
 function VehicleInFront()
   local player = PlayerPedId()
