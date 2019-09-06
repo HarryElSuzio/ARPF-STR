@@ -71,10 +71,10 @@ RegisterCommand('spawnstr', function()
     end
 end, false)
 
-RegisterCommand('spawnstr', function() 
+--[[RegisterCommand('spawnstr', function() 
         LoadModel('prop_ld_binbag_01')
         local wheelchair = CreateObject(GetHashKey('prop_ld_binbag_01'), GetEntityCoords(PlayerPedId()), true)
-end, false)
+end, false)]]
 
 RegisterCommand('ro', function(source, args)
         DeleteOBJ('prop_ld_binbag_01')
